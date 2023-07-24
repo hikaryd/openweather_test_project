@@ -132,3 +132,5 @@ dmypy.json
 .idea
 
 .python-version
+
+alembic/versions/
