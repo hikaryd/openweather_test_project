@@ -23,14 +23,9 @@ cd openweather_test_project
 
 
 ### **Как запустит проект**:
-* Поднимаем контейнеры :
+* Поднимаем контейнеры:
    ```
    docker-compose up -d --build
-   ```
-* Загружаем 50 крупнейших городов мира:
-   ```
-   docker-compose exec web python manage.py makemigrations
-   docker-compose exec web python manage.py migrate
    ```
 ___
 ### **Документация**:
