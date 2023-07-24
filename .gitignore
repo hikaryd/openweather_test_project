@@ -133,4 +133,4 @@ dmypy.json
 
 .python-version
 
-alembic/versions/
+alembic/versions/*
