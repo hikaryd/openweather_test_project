@@ -12,7 +12,7 @@ https://github.com/hikaryd/openweather_test_project
 cd openweather_test_project
 ```
 
-### **Шаблон наполнения env-файла:**:
+### **Шаблон наполнения env-файла**:
 1) Шаблон наполнения .env должен быть расположен по пути infra/.env :
     ```
     SECRET=test

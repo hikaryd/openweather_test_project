@@ -1,11 +1,9 @@
-import logging
-
 import httpx
 
 from app.core.config import settings
 from app.core.db import AsyncSessionLocal
 from app.crud import cities_crud, openweather_crud
-from app.schemas import ApiOpenWeather, WeatherDB
+from app.schemas import ApiOpenWeather
 from app.schemas.openweather import WeatherCreate
 
 
@@ -31,7 +29,4 @@ async def get_weather():
                     temp_max=data.main.temp_max,
                     temp_min=data.main.temp_min,
                 )
-                logging.basicConfig(level=logging.INFO)
-                logger = logging.getLogger(__name__)
-                logger.info(create_data.dict())
                 await openweather_crud.create(create_data, session=session)
