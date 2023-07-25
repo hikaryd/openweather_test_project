@@ -20,7 +20,6 @@ class WeatherCBV:
         "/last_hour",
     )
     async def get_last_hour(self) -> List[WeatherDB]:
-        """Получение погоды во всех городах за последний час."""
         weather_last_hour = await openweather_crud.get_multi_last_hour(
             session=self.session
         )
@@ -30,7 +29,6 @@ class WeatherCBV:
         "/",
     )
     async def get_all(self) -> List[WeatherDB]:
-        """Получение погоды во всех городах за все время."""
         weather_all = await openweather_crud.get_multi(session=self.session)
         return weather_all
 
