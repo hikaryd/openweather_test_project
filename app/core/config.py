@@ -3,9 +3,9 @@ from pydantic import BaseSettings
 
 class Settings(BaseSettings):
     app_title: str = "TestProjectOpenWeather"
-    database_url: str = "sqlite+aiosqlite:///./fastapi.db"
+    database_url: str = "postgresql+asyncpg://postgres:postgres@localhost:5432/postgres"
     secret: str = "secret"
-    openweathermap_key: str = "d6f93bf44c7ae06b56225112ee80901d"
+    openweathermap_key: str = ""
 
     CITIES = [
         "Tokyo",
