@@ -1,4 +1,3 @@
-import logging
 from typing import List
 
 from fastapi import Depends, HTTPException
@@ -9,7 +8,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.api import validators
 from app.core.db import get_async_session
 from app.crud import cities_crud
-from app.schemas import CityCreate, CityDB
+from app.schemas import CityDB
 from app.services import get_city_by_name
 
 router = InferringRouter()

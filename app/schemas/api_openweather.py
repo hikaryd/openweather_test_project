@@ -22,8 +22,8 @@ class Main(BaseModel):
     temp_max: float
     pressure: int
     humidity: int
-    sea_level: int
-    grnd_level: int
+    sea_level: Optional[int]
+    grnd_level: Optional[int]
 
 
 class Wind(BaseModel):
@@ -38,7 +38,7 @@ class Clouds(BaseModel):
 
 class Sys(BaseModel):
     type: Optional[int]
-    id: int
+    id: Optional[int]
     country: str
     sunrise: int
     sunset: int
