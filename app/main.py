@@ -18,7 +18,7 @@ async def startup():
     scheduler.add_job(get_weather, "cron", hour="*/1")
     scheduler.start()
 
-    # Данный кусок кода нужен просто для добавление 50 крупнейших городов мира
+    # Данный кусок кода нужен просто для добавления 50 крупнейших городов мира
     for city in settings.CITIES:
         city_data = await get_city_by_name(city)
         if city_data is None:
