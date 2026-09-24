@@ -3,7 +3,7 @@ from pydantic import BaseSettings
 
 class Settings(BaseSettings):
     app_title: str = "TestProjectOpenWeather"
-    database_url: str = "postgresql+asyncpg://postgres:postgres@localhost:5432/postgres"
+    database_url: str
     secret: str = "secret"
     openweathermap_key: str = ""
 

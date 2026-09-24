@@ -12,15 +12,11 @@ https://github.com/hikaryd/openweather_test_project
 cd openweather_test_project
 ```
 
-### **Шаблон наполнения env-файла**:
-1) Шаблон наполнения .env должен быть расположен по пути infra/.env :
-    ```
-    SECRET=test
-    DATABASE_URL=postgresql+asyncpg://test_user:REDACTED_DB_PASSWORD@database:5432/test_project
-    APP_TITLE=OpenWeatheTestProject
-    OPENWEATHERMAP_KEY=
-   ```
+### Настройка окружения
 
+Скопируйте `.env.example` в `.env`. Задайте уникальный `POSTGRES_PASSWORD` и `DATABASE_URL` для пользователя `test_user` и базы `test_project` с тем же паролем. В URL специальные символы пароля нужно кодировать по правилам percent-encoding. Укажите `OPENWEATHERMAP_KEY`. Файл `.env` не добавляется в Git и в Docker-образ.
+
+Пример формы URL: `postgresql+asyncpg://test_user:<url-encoded-password>@database:5432/test_project`.
 
 ### **Как запустит проект**:
 * Поднимаем контейнеры:
@@ -34,4 +30,4 @@ ___
 http://127.0.0.1:8000/docs#/
 ```
 
-* [hikaryd](https://github.com/hikaryd) 
+* [hikaryd](https://github.com/hikaryd)
